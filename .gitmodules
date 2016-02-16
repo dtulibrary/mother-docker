@@ -1,0 +1,9 @@
+[submodule "toshokan"]
+	path = toshokan
+	url = git@github.com:dtulibrary/toshokan
+[submodule "docdel"]
+	path = docdel
+	url = git@github.com:dtulibrary/docdel
+[submodule "findit-auth"]
+	path = findit-auth
+	url = git@github.com:dtulibrary/findit-auth
