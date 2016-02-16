@@ -1,0 +1,48 @@
+version: '2' 
+
+services:
+  
+  docdel-db:
+    image: postgres
+
+  docdel-web:
+    build: docdel/
+
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    volumes:
+      - ./docdel:/myapp
+    ports:
+      - "3002:3000"
+    depends_on:
+      - docdel-db
+
+  auth-db:
+    image: postgres
+
+  auth-web:
+    build: findit-auth/
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    volumes:
+      - ./findit-auth/:/myapp
+    ports:
+      - "3001:3000"
+    depends_on:
+      - auth-db
+
+  findit-solr:
+    build: "https://github.com/dtulibrary/solr_with_fixtures.git"
+
+  findit-db:
+    image: postgres
+
+  findit-web:
+    build: toshokan/
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    volumes:
+      - ./toshokan/:/myapp
+    ports:
+      - "3000:3000"
+    depends_on:
+      - findit-solr
+      - findit-db
+
