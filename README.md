@@ -1,5 +1,5 @@
 # mother-docker
-A project which can build the entire DTU-Findit infrastructure
+A project which can build the **entire** DTU-Findit infrastructure
 
 You need [docker](https://www.docker.com) and docker-compose installed.
 
@@ -18,9 +18,8 @@ You need [docker](https://www.docker.com) and docker-compose installed.
 
 
 
+####Additional####
 
+[Here is a list](https://github.com/dtulibrary/mother-docker/issues/1) of all the containers we are working on dockerizing.
 
-
-
-
-[Here is a list](https://github.com/dtulibrary/mother-docker/issues/1) of all the containers we are working on dockerizing
+Pull requests / issues welcome!
