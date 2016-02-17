@@ -16,6 +16,15 @@ You need [docker](https://www.docker.com) and docker-compose installed.
  
  `./first_run.sh`
 
+####Services and ports####
+Now you can visit
+
+|Service | Port |
+|--------|------|
+|Findit  | <http://localhost:3000> |
+|Findit-Auth  | <http://localhost:3001> |
+|Document Delivery  | <http://localhost:3002> |
+
 
 
 ####Additional####
