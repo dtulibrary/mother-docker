@@ -78,4 +78,4 @@ services:
     volumes:
       - ./getit/:/myapp
     ports:
-      - "3003:3000"
+      - "3003:9292"
