@@ -30,7 +30,12 @@ Now you can visit
 |Findit  | <http://localhost:3000> |
 |Findit-Auth  | <http://localhost:3001> |
 |Document Delivery  | <http://localhost:3002> |
-
+|Getit | <http://localhost:3003> |
+|Sendit  | <http://localhost:3004> |
+|~~DocStore~~  | <http://localhost:3005> |
+|~~Redmine~~  | <http://localhost:3006> |
+|~~Alerting~~  | <http://localhost:3007> |
+|Covers  | <http://localhost:3008> |
 
 
 ####Additional####
