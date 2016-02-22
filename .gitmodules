@@ -7,3 +7,6 @@
 [submodule "findit-auth"]
 	path = findit-auth
 	url = git@github.com:dtulibrary/findit-auth
+[submodule "sendit"]
+	path = sendit
+	url = git@github.com:dtulibrary/sendit
