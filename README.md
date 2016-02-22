@@ -8,6 +8,10 @@ You need [docker](https://www.docker.com) and docker-compose installed.
 
    `git clone --recursive <repourl>`
 
+1. For now, each repo needs to be on a branch called 'dockerize'
+
+   So you need to cd into each directory and switch to that branch (until we have merged those branches to master)
+
 2. Use Docker Compose to build and start all the containers.
 
   `docker-compose up`
@@ -15,6 +19,8 @@ You need [docker](https://www.docker.com) and docker-compose installed.
 3. The first time you need to create databases
  
  `./first_run.sh`
+
+
 
 ####Services and ports####
 Now you can visit
