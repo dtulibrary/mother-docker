@@ -13,3 +13,6 @@
 [submodule "covers"]
 	path = covers
 	url = git@github.com:dtulibrary/covers
+[submodule "getit"]
+	path = getit
+	url = git@github.com:dtulibrary/getit
