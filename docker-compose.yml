@@ -72,10 +72,10 @@ services:
     depends_on:
         - covers-db
 
-    getit-web:
-      build: getit/
-      command: rackup
-      volumes:
-        - ./getit/:/myapp
-      ports:
-        - "3003:3000"
+  getit-web:
+    build: getit/
+    command: rackup
+    volumes:
+      - ./getit/:/myapp
+    ports:
+      - "3003:3000"
