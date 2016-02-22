@@ -10,3 +10,6 @@
 [submodule "sendit"]
 	path = sendit
 	url = git@github.com:dtulibrary/sendit
+[submodule "covers"]
+	path = covers
+	url = git@github.com:dtulibrary/covers
