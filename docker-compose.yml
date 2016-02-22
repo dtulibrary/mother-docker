@@ -56,6 +56,8 @@ services:
       - ./sendit/:/myapp
     ports:
       - "3004:3000"
+    depends_on:
+      - sendit-db
 
   covers-db:
     image: postgres
@@ -68,4 +70,4 @@ services:
     ports:
       - "3008:3000"
     depends_on:
-      - covers-db
+        - covers-db
