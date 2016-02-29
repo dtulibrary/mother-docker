@@ -1,9 +1,9 @@
 version: '2' 
 
 services:
-  
-  docdel-db:
-    image: postgres
+
+  db:
+    build: db/
 
   docdel-web:
     build: docdel/
@@ -14,10 +14,7 @@ services:
     ports:
       - "3002:3000"
     depends_on:
-      - docdel-db
-
-  auth-db:
-    image: postgres
+      - db
 
   auth-web:
     build: findit-auth/
@@ -27,13 +24,11 @@ services:
     ports:
       - "3001:3000"
     depends_on:
-      - auth-db
+      - db
 
   findit-solr:
     build: "https://github.com/dtulibrary/solr_with_fixtures.git"
 
-  findit-db:
-    image: postgres
 
   findit-web:
     build: toshokan/
@@ -44,10 +39,7 @@ services:
       - "3000:3000"
     depends_on:
       - findit-solr
-      - findit-db
-
-  sendit-db:
-    image: postgres
+      - db
 
   sendit-web:
     build: sendit/
@@ -57,10 +49,7 @@ services:
     ports:
       - "3004:3000"
     depends_on:
-      - sendit-db
-
-  covers-db:
-    image: postgres
+      - db
 
   covers-web:
     build: covers/
@@ -70,7 +59,7 @@ services:
     ports:
       - "3008:3000"
     depends_on:
-        - covers-db
+      - db
 
   getit-web:
     build: getit/
@@ -80,9 +69,6 @@ services:
     ports:
       - "3003:9292"
 
-  docstore-db:
-    image: postgres
-
   docstore-web:
     build: docstore/
     command: bundle exec rails s -p 3000 -b '0.0.0.0'
@@ -91,11 +77,8 @@ services:
     ports:
       - "3005:3000"
     depends_on:
-      - docstore-db
+      - db
         
-  alerting-db:
-    image: postgres
-
   alerting-web:
     build: alerting/
     command: bundle exec rails s -p 3000 -b '0.0.0.0'
@@ -104,4 +87,4 @@ services:
     ports:
       - "3007:3000"
     depends_on:
-      - alerting-db
+      - db
