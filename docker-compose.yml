@@ -63,11 +63,11 @@ services:
 
   getit-web:
     build: getit/
-    command: rackup
+    command: thin start -p 3000
     volumes:
       - ./getit/:/myapp
     ports:
-      - "3003:9292"
+      - "3003:3000"
 
   docstore-web:
     build: docstore/
