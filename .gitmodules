@@ -16,3 +16,6 @@
 [submodule "getit"]
 	path = getit
 	url = git@github.com:dtulibrary/getit
+[submodule "docstore"]
+	path = docstore
+	url = git@github.com:dtulibrary/docstore
