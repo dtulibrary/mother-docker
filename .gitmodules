@@ -19,3 +19,6 @@
 [submodule "docstore"]
 	path = docstore
 	url = git@github.com:dtulibrary/docstore
+[submodule "alerting"]
+	path = alerting
+	url = git@github.com:dtulibrary/alerting
