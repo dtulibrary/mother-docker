@@ -36,7 +36,10 @@ Now you can visit
 |~~Redmine~~ |  <http://localhost:3006> | A project management web application |
 |Alerting  |    <http://localhost:3007> | |
 |Covers  |      <http://localhost:3008> | |
-
+|~~DTUBasen~~ | <http://localhost:3009> | |
+|~~Reprintsdesk~~  |    <http://localhost:3010> | |
+|~~DTULocal Scan~~  |    <http://localhost:3011> | |
+|~~DTU Cas~~  |    <http://localhost:3012> | |
 
 ####Additional####
 
