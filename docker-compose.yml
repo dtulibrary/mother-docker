@@ -88,3 +88,10 @@ services:
       - "3007:3000"
     depends_on:
       - db
+
+  redmine:
+    image: redmine
+    ports: 
+      - "3006:3000"
+
+# uses built in sqlite at the moment
