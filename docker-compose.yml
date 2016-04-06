@@ -90,8 +90,9 @@ services:
       - db
 
   redmine:
-    image: redmine
+    image: redmine:2.6.10
     ports: 
       - "3006:3000"
 
-# uses built in sqlite at the moment
+# uses built in sqlite3 at the moment
+
