@@ -1,11 +1,11 @@
 # for development
-docker-compose run auth-web   rake db:setup
-docker-compose run docdel-web rake db:setup
-docker-compose run findit-web rake db:setup
-docker-compose run sendit-web rake db:setup
-docker-compose run covers-web rake db:setup
-docker-compose run docstore-web rake db:setup
-docker-compose run alerting-web rake db:setup
+docker-compose exec auth-web   rake db:setup
+docker-compose exec docdel-web rake db:setup
+docker-compose exec findit-web rake db:setup
+docker-compose exec sendit-web rake db:setup
+docker-compose exec covers-web rake db:setup
+docker-compose exec docstore-web rake db:setup
+docker-compose exec alerting-web rake db:setup
 
 
 # copy the config/ settings from puppet?
