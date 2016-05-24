@@ -8,9 +8,9 @@ You need [docker](https://www.docker.com) and docker-compose installed.
 
    `git clone --recursive <repourl>`
 
-1. For now, each repo needs to be on a branch called 'dockerize'
+1. For now, each repo needs to be on a branch called 'dockerize':
 
-   So you need to cd into each directory and switch to that branch (until we have merged those branches to master)
+  `git submodule foreach git checkout dockerize`
 
 2. Use Docker Compose to build and start all the containers.
 
@@ -20,6 +20,10 @@ You need [docker](https://www.docker.com) and docker-compose installed.
  
  `./first_run.sh`
 
+
+4. Once in a while, if the submodules have been updated you can do:
+
+ `git pull --recurse-submodules`
 
 
 ####Services and ports####
