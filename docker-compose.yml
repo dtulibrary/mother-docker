@@ -5,7 +5,7 @@ services:
   db:
     build: db/
 
-  docdel-web:
+  docdel:
     build: docdel/
 
     command: bundle exec rails s -p 3000 -b '0.0.0.0'
@@ -16,7 +16,7 @@ services:
     depends_on:
       - db
 
-  auth-web:
+  findit-auth:
     build: findit-auth/
     command: bundle exec rails s -p 3000 -b '0.0.0.0'
     volumes:
@@ -30,7 +30,7 @@ services:
     build: "https://github.com/dtulibrary/solr_with_fixtures.git"
 
 
-  findit-web:
+  findit:
     build: toshokan/
     command: bundle exec rails s -p 3000 -b '0.0.0.0'
     volumes:
@@ -41,7 +41,7 @@ services:
       - findit-solr
       - db
 
-  sendit-web:
+  sendit:
     build: sendit/
     command: bundle exec rails s -p 3000 -b '0.0.0.0'
     volumes:
@@ -51,7 +51,7 @@ services:
     depends_on:
       - db
 
-  covers-web:
+  covers:
     build: covers/
     command: bundle exec rails s -p 3000 -b '0.0.0.0'
     volumes:
@@ -61,7 +61,7 @@ services:
     depends_on:
       - db
 
-  getit-web:
+  getit:
     build: getit/
     command: thin start -p 3000
     volumes:
@@ -69,7 +69,7 @@ services:
     ports:
       - "3003:3000"
 
-  docstore-web:
+  docstore:
     build: docstore/
     command: bundle exec rails s -p 3000 -b '0.0.0.0'
     volumes:
@@ -79,7 +79,7 @@ services:
     depends_on:
       - db
         
-  alerting-web:
+  alerting:
     build: alerting/
     command: bundle exec rails s -p 3000 -b '0.0.0.0'
     volumes:
