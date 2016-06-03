@@ -9,4 +9,4 @@ RUN git clone https://github.com/dtulibrary/rubycas-server /myapp
 WORKDIR /myapp
 #COPY Gemfile* *.gemspec /myapp/
 RUN bundle install
-#ADD . /myapp
+ADD config.yml /myapp
