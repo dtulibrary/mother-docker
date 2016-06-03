@@ -89,6 +89,16 @@ services:
     depends_on:
       - db
 
+  cas:
+    build: rubycas-server/
+    command: bundle exec rubycas-server -c config.yml
+    #volumes:
+    #  - ./rubycas-server:/myapp
+    ports:
+      - "3012:3000"
+    depends_on:
+      - db
+
   redmine:
     image: redmine:2.6.10
     ports: 
