@@ -8,10 +8,6 @@ You need [docker](https://www.docker.com) and docker-compose installed.
 
    `git clone --recursive <repourl>`
 
-1. For now, each repo needs to be on a branch called 'dockerize':
-
-  `git submodule foreach git checkout dockerize`
-
 2. Use Docker Compose to build and start all the containers.
 
   `docker-compose up`
@@ -24,6 +20,15 @@ You need [docker](https://www.docker.com) and docker-compose installed.
 4. Once in a while, if the submodules have been updated you can do:
 
  `git pull --recurse-submodules`
+
+
+5. Currently, two repos still need to change to a 'dockerize' branch
+
+These are:
+
+*docstore
+
+*findit-auth
 
 
 ####Services and ports####
