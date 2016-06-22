@@ -22,11 +22,7 @@ You need [docker](https://www.docker.com) and docker-compose installed.
  `git pull --recurse-submodules`
 
 
-5. Currently, two repos still need to change to a 'dockerize' branch
-
-These are:
-
-*docstore
+5. Currently, one still needs to change to a 'dockerize' branch
 
 *findit-auth
 
