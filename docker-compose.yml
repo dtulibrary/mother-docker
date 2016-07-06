@@ -27,6 +27,8 @@ services:
       - db
 
   findit-solr:
+    ports:
+      - "8983:8983"
     build: "https://github.com/dtulibrary/solr_with_fixtures.git"
 
 
@@ -103,6 +105,14 @@ services:
     image: redmine:2.6.10
     ports: 
       - "3006:3000"
+
+  freecite:
+    build: freecite/
+    command: rackup --host 0.0.0.0 --port 3000
+    volumes:
+      - ./freecite/:/myapp
+    ports:
+      - "3013:3000"
 
 # uses built in sqlite3 at the moment
 

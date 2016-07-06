@@ -22,3 +22,6 @@
 [submodule "alerting"]
 	path = alerting
 	url = git@github.com:dtulibrary/alerting
+[submodule "freecite"]
+	path = freecite
+	url = git@github.com:dtulibrary/freecite-docker
