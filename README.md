@@ -34,13 +34,13 @@ Now you can visit
 |--------|------|---------|
 |Findit  |      <http://localhost:3000> | Findit frontend|
 |Findit-Auth |  <http://localhost:3001> | Authentication system |
-|DocDel |       <http://localhost:3002> | |
-|Getit |        <http://localhost:3003> | |
-|Sendit  |      <http://localhost:3004> | |
-|DocStore |     <http://localhost:3005> | |
+|DocDel |       <http://localhost:3002> | Document delivery|
+|Getit |        <http://localhost:3003> | Link resolver proxy|
+|Sendit  |      <http://localhost:3004> | Communication server, sends emails|
+|DocStore |     <http://localhost:3005> | Document store |
 |~~Redmine~~ |  <http://localhost:3006> | A project management web application |
 |Alerting  |    <http://localhost:3007> | |
-|Covers  |      <http://localhost:3008> | |
+|Covers  |      <http://localhost:3008> | IIIF Compliant cover image service|
 |~~DTUBasen~~ | <http://localhost:3009> | |
 |~~Reprintsdesk~~  |    <http://localhost:3010> | |
 |~~DTULocal Scan~~  |    <http://localhost:3011> | |
