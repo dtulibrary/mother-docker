@@ -19,7 +19,7 @@ You need [docker](https://www.docker.com) and docker-compose installed.
 
 4. Once in a while, if the submodules have been updated you can do:
 
- `git pull --recurse-submodules`
+ `git submodule foreach git pull origin master`
 
 
 5. Currently, one still needs to change to a 'dockerize' branch
