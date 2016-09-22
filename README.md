@@ -66,7 +66,11 @@ We added scripts to start Findit on the Swarm (docker-compose not needed)
 
   `./swarm_build_and_push_to_registry.sh toshokan`
 
-  (Maybe it should just build all images? Will take some time initially)
+  If you want to build ALL projects do:
+
+  `./swarm_build_and_push_to_registry.sh all`
+
+
 
 4. Start services
 
