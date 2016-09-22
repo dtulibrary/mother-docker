@@ -13,13 +13,13 @@ You need [docker](https://www.docker.com) and docker-compose installed.
   `docker-compose up`
 
 3. The first time you need to create databases
- 
- `./first_run.sh`
+
+  `./first_run.sh`
 
 
 4. Once in a while, if the submodules have been updated you can do:
 
- `git submodule foreach git pull origin master`
+  `git submodule foreach git pull origin master`
 
 
 5. Currently, one still needs to change to a 'dockerize' branch
@@ -27,7 +27,7 @@ You need [docker](https://www.docker.com) and docker-compose installed.
 *findit-auth
 
 
-####Services and ports####
+###Services and ports###
 Now you can visit
 
 |Service | Port | Purpose |
@@ -45,6 +45,33 @@ Now you can visit
 |~~Reprintsdesk~~  |    <http://localhost:3010> | |
 |~~DTULocal Scan~~  |    <http://localhost:3011> | |
 |~~DTU Cas~~  |    <http://localhost:3012> | |
+
+## Docker Swarm (Experimental)
+
+We added scripts to start Findit on the Swarm (docker-compose not needed)
+
+1. Start your (local) Swarm
+
+  `docker swarm init`
+
+2. Start a local registry
+
+  The Swarm requires you to put your images in a registry. For now we create our own registry:
+
+  `./swarm_start_jenkins_registry`
+
+3. Build images and put them in the registry
+
+  There is a script to build and push images to the registry, it accepts the project name as a parameter:
+
+  `./swarm_build_and_push_to_registry.sh toshokan`
+
+  (Maybe it should just build all images? Will take some time initially)
+
+4. Start services
+
+  `./swarm_start_findit.sh`
+
 
 ####Additional####
 
