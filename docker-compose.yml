@@ -102,7 +102,7 @@ services:
       - db
 
   redmine:
-    image: redmine:2.6.10
+    build: redmine/
     ports: 
       - "3006:3000"
 
