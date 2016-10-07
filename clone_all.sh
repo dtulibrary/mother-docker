@@ -1,0 +1,9 @@
+git clone git@github.com:dtulibrary/toshokan
+git clone git@github.com:dtulibrary/docdel
+git clone git@github.com:dtulibrary/findit-auth
+git clone git@github.com:dtulibrary/sendit
+git clone git@github.com:dtulibrary/covers
+git clone git@github.com:dtulibrary/getit
+git clone git@github.com:dtulibrary/docstore
+git clone git@github.com:dtulibrary/alerting
+git clone git@github.com:dtulibrary/freecite-docker
