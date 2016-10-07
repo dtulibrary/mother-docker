@@ -1,28 +1,22 @@
 #!/bin/bash
+
+projects=( alerting covers docdel docstore findit-auth freecite getit sendit toshokan )
+
 function clonehttp {
   echo "Clone all via HTTP.."
-  git clone https://github.com/dtulibrary/toshokan
-  git clone https://github.com/dtulibrary/docdel
-  git clone https://github.com/dtulibrary/findit-auth
-  git clone https://github.com/dtulibrary/sendit
-  git clone https://github.com/dtulibrary/covers
-  git clone https://github.com/dtulibrary/getit
-  git clone https://github.com/dtulibrary/docstore
-  git clone https://github.com/dtulibrary/alerting
+  for i in "${projects}"
+  do
+    git clone https://github.com/dtulibrary/$i
+  done
   exit
 }
 
 function clonessh {
   echo "Clone all via SSH.."
-  git clone git@github.com:dtulibrary/toshokan
-  git clone git@github.com:dtulibrary/docdel
-  git clone git@github.com:dtulibrary/findit-auth
-  git clone git@github.com:dtulibrary/sendit
-  git clone git@github.com:dtulibrary/covers
-  git clone git@github.com:dtulibrary/getit
-  git clone git@github.com:dtulibrary/docstore
-  git clone git@github.com:dtulibrary/alerting
-  git clone git@github.com:dtulibrary/freecite-docker
+  for i in "${projects}"
+  do
+    git clone git@github.com:dtulibrary/$i
+  done
   exit
 }
 
