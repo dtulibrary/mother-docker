@@ -1,3 +1,4 @@
+#!/bin/bash
 # Run these when the container is already running
 
 docker exec `docker ps -qf "name=alerting"    | head -n 1`  bundle exec rake db:setup

@@ -1,3 +1,5 @@
+#!/bin/bash
+
 docker service rm db
 docker service rm alerting
 docker service rm covers

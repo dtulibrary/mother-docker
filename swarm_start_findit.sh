@@ -1,3 +1,4 @@
+#!/bin/bash
 # This is how we can create a SWARM manually with commands
 # after we have initiated the SWARM and created the worker / manager nodes
 
