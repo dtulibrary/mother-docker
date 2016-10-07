@@ -10,7 +10,7 @@ You need [docker](https://www.docker.com) and docker-compose installed.
 
    We might be moving away from submodules, then run the script:
 
-   `./clone_all`
+   `./clone_all.sh`
 
    And enter "h" at the prompt, unless you have SSH access to the repo, then write "s"
 
