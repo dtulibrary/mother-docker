@@ -3,11 +3,21 @@
 # Call this with project name as a parameter to build it and push to registry
 # Call it with 'all' and all projects will be built
 
+# Check if we are already using another registry:
+if  [ -z ${REGISTRY} ];
+then
+  REGISTRY=localhost
+  echo "Using localhost as registry";
+else
+  echo "Using Registry: $REGISTRY";
+fi
+
+
 function buildproject {
   echo "Building project: " $1
   docker build -t dtu/$1 $1
-  docker tag dtu/$1 localhost:5000/dtu/$1
-  docker push       localhost:5000/dtu/$1
+  docker tag dtu/$1 $REGISTRY:5000/dtu/$1
+  docker push       $REGISTRY:5000/dtu/$1
 }
 
 if [[ $# -eq 0 ]] ; then

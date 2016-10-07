@@ -1,6 +1,13 @@
 #!/bin/bash
 
-$REGISTRY=localhost
+# Check if we are already using another registry:
+if  [ -z ${REGISTRY} ];
+then
+  REGISTRY=localhost
+  echo "Using localhost as registry";
+else
+  echo "Using Registry: $REGISTRY";
+fi
 
 # 1. Create network
 docker network create --driver overlay finditnet
