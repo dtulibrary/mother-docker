@@ -8,6 +8,12 @@ You need [docker](https://www.docker.com) and docker-compose installed.
 
    `git clone --recursive <repourl>`
 
+   We might be moving away from submodules, then run the script:
+
+   `./clone_all`
+
+   And enter "h" at the prompt, unless you have SSH access to the repo, then write "s"
+
 2. Use Docker Compose to build and start all the containers.
 
   `docker-compose up`
