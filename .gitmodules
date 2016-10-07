@@ -1,27 +1,27 @@
 [submodule "toshokan"]
-	path = toshokan
-	url = git@github.com:dtulibrary/toshokan
+  path = toshokan
+  url = https://github.com/dtulibrary/toshokan
 [submodule "docdel"]
-	path = docdel
-	url = git@github.com:dtulibrary/docdel
+  path = docdel
+  url = https://github.com/dtulibrary/docdel
 [submodule "findit-auth"]
-	path = findit-auth
-	url = git@github.com:dtulibrary/findit-auth
+  path = findit-auth
+  url = https://github.com/dtulibrary/findit-auth
 [submodule "sendit"]
-	path = sendit
-	url = git@github.com:dtulibrary/sendit
+  path = sendit
+  url = https://github.com/dtulibrary/sendit
 [submodule "covers"]
-	path = covers
-	url = git@github.com:dtulibrary/covers
+  path = covers
+  url = https://github.com/dtulibrary/covers
 [submodule "getit"]
-	path = getit
-	url = git@github.com:dtulibrary/getit
+  path = getit
+  url = https://github.com/dtulibrary/getit
 [submodule "docstore"]
-	path = docstore
-	url = git@github.com:dtulibrary/docstore
+  path = docstore
+  url = https://github.com/dtulibrary/docstore
 [submodule "alerting"]
-	path = alerting
-	url = git@github.com:dtulibrary/alerting
+  path = alerting
+  url = https://github.com/dtulibrary/alerting
 [submodule "freecite"]
-	path = freecite
-	url = git@github.com:dtulibrary/freecite-docker
+  path = freecite
+  url = https://github.com/dtulibrary/freecite-docker
