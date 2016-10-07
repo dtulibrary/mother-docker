@@ -8,7 +8,7 @@ You need [docker](https://www.docker.com) and docker-compose installed.
 
    `git clone --recursive <repourl>`
 
-   We might be moving away from submodules, then run the script:
+   We **might** be moving away from submodules, then run the script:
 
    `./clone_all.sh`
 
@@ -30,8 +30,13 @@ You need [docker](https://www.docker.com) and docker-compose installed.
 
 5. Currently, one still needs to change to a 'dockerize' branch
 
-*findit-auth
+  *findit-auth*
 
+6. DTU employees only:
+
+  If you don't want git to ask for your username and password do:
+
+  `./dtu_employees_use_ssh.sh` 
 
 ###Services and ports###
 Now you can visit
