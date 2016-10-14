@@ -38,10 +38,11 @@ services:
     volumes:
       - ./toshokan/:/myapp
     ports:
-      - "3000:3000"
+      - "80:3000"
     depends_on:
       - findit-solr
       - db
+      - alerting
 
   sendit:
     build: sendit/
