@@ -27,6 +27,8 @@ You need [docker](https://www.docker.com) and docker-compose installed.
 
   `git submodule foreach git pull origin master`
 
+  This is also in a script `./update_submodules.sh`
+
 
 5. Currently, one still needs to change to a 'dockerize' branch
 
