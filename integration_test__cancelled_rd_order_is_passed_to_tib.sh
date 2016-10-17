@@ -6,6 +6,7 @@ if [[ $? != 0 ]]; then
 fi
 cat /tmp/create_rd_order.log
 ORDER_ID=$( grep -E -o '^ID: [0-9]+' /tmp/create_rd_order.log | cut -c 5- )
+DOCDEL_ORDER_ID=$( grep -E -o '^DOCDEL_ORDER_ID: [0-9]+' /tmp/create_rd_order.log | cut -c 18- )
 rm /tmp/create_rd_order.log
 echo "--- END create_rd_order ---"
 
@@ -17,7 +18,7 @@ EXTERNAL_TIB_ORDER_NUMBER=$( docker-compose exec --user "0:0" --privileged docde
 echo "--- END generate_random_external_tib_ordernumber ---"
 
 echo "--- BEGIN rd_cancel__tib_deliver ---"
-docker-compose exec --user "0:0" --privileged docdel bundle exec rails runner integration_test_scripts/rd_cancel__tib_deliver.rb $ORDER_ID $EXTERNAL_RD_ORDER_NUMBER $EXTERNAL_TIB_ORDER_NUMBER
+docker-compose exec --user "0:0" --privileged docdel bundle exec rails runner integration_test_scripts/rd_cancel__tib_deliver.rb $DOCDEL_ORDER_ID $EXTERNAL_RD_ORDER_NUMBER $EXTERNAL_TIB_ORDER_NUMBER
 if [[ $? != 0 ]]; then
 	echo "Simulation of cancellation of TIB order in Docdel failed."
 	exit 2
