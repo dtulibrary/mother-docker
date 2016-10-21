@@ -1,8 +1,7 @@
 #!/bin/bash
+# Use this if you also want to experiment with Jenkins build server
 
-$REGISTRY=localhost
-
-# 1. Create network
+# 1. Create network if not existing
 docker network create --driver overlay finditnet
 
 # Jenkins home will be in thisfolder/jenkins
