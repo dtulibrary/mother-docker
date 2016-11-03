@@ -1,0 +1,96 @@
+version: '2'
+
+services:
+
+  db:
+    image: postgres
+    environment:
+    - "POSTGRES_PASSWORD: db"
+    - "POSTGRES_USER: db"
+
+  docdel:
+    image: localhost:5000/dtu/docdel
+
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    volumes:
+      - ./docdel:/myapp
+    ports:
+      - "3002:3000"
+    depends_on:
+      - db
+
+  findit-auth:
+    image: localhost:5000/dtu/findit-auth
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    volumes:
+      - ./findit-auth/:/myapp
+    ports:
+      - "3001:3000"
+    depends_on:
+      - db
+
+  findit-solr:
+    image: localhost:5000/dtu/findit-solr
+    ports:
+      - "8983:8983"
+
+  findit:
+    image: localhost:5000/dtu/toshokan
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    volumes:
+      - ./toshokan/:/myapp
+    ports:
+      - "80:3000"
+    depends_on:
+      - findit-solr
+      - db
+      - alerting
+
+#  sendit:
+#    build: sendit/
+#    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+#    volumes:
+#      - ./sendit/:/myapp
+#    ports:
+#      - "3004:3000"
+#    depends_on:
+#      - db
+#
+#  covers:
+#    build: covers/
+#    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+#    volumes:
+#      - ./covers/:/myapp
+#    ports:
+#      - "3008:3000"
+#    depends_on:
+#      - db
+#
+#  getit:
+#    build: getit/
+#    command: thin start -p 3000
+#    volumes:
+#      - ./getit/:/myapp
+#    ports:
+#      - "3003:3000"
+#
+#  docstore:
+#    build: docstore/
+#    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+#    volumes:
+#      - ./docstore:/myapp
+#    ports:
+#      - "3005:3000"
+#    depends_on:
+#      - db
+#
+  alerting:
+    image: localhost:5000/dtu/alerting
+    command: bundle exec rails s -p 3000 -b '0.0.0.0'
+    volumes:
+      - ./alerting:/myapp
+    ports:
+      - "3007:3000"
+    depends_on:
+      - db
+
