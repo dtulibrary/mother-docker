@@ -6,39 +6,31 @@ You need [docker](https://www.docker.com) and docker-compose installed.
 
 1. Start by cloning this repo **recursively** which gets all the submodules.
 
-   `git clone --recursive <repourl>`
+  `git clone --recursive <repourl>`
 
-   We **might** be moving away from submodules, then run the script:
+  If you are not in the dtulibrary group you need:
 
-   `./clone_all.sh`
+  `./clone_all.sh`
 
-   And enter "h" at the prompt, unless you have SSH access to the repo, then write "s"
+  .. which asks if you want to clone via SSH (Default, only DTU members) or HTTPS (everyone else)
 
 2. Use Docker Compose to build and start all the containers.
 
   `docker-compose up`
 
+  or:
+
+  `./compose_start.sh`
+
 3. The first time you need to create databases
 
-  `./first_run.sh`
+  `./compose_first_run.sh`
 
 
-4. Once in a while, if the submodules have been updated you can do:
+4. Once in a while, to update the submodules you can do:
 
-  `git submodule foreach git pull origin master`
+  `./update_submodules.sh`
 
-  This is also in a script `./update_submodules.sh`
-
-
-5. Currently, one still needs to change to a 'dockerize' branch
-
-  *findit-auth*
-
-6. DTU employees only:
-
-  If you don't want git to ask for your username and password do:
-
-  `./dtu_employees_use_ssh.sh` 
 
 ###Services and ports###
 Now you can visit
